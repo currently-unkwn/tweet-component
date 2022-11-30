@@ -3,6 +3,18 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
+const testTweet = {
+  message: "Something about cats.",
+  gravatar: "xyz",
+  author: {
+    handle: "catperson",
+    name: "IAMA Cat Person",
+  },
+  likes: 2,
+  retweets: 0,
+  timestamp: "2016-07-30 21:24:37",
+};
+
 const Avatar = () => {
   return (
     <img
@@ -46,7 +58,7 @@ const MoreOptionsButton = () => {
   return <i className="fa fa-ellipsis-h more-options-button" />;
 };
 
-const Tweet = () => {
+const Tweet = ({ tweet }) => {
   return (
     <div className="tweet">
       <Avatar />
@@ -66,7 +78,7 @@ const Tweet = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Tweet />);
+root.render(<Tweet tweet={testTweet} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
