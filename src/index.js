@@ -15,31 +15,28 @@ const testTweet = {
   timestamp: "2016-07-30 21:24:37",
 };
 
-const Avatar = () => {
-  return (
-    <img
-      src="https://www.gravatar.com/avatar/nothing"
-      className="avatar"
-      alt="avatar"
-    />
-  );
+const Avatar = ({ hash }) => {
+  const url = `https://www.gravatar.com/avatar/${hash}`;
+  return <img src={url} className="avatar" alt="avatar" />;
 };
 
-const Message = () => {
-  return <div className="message">This is less than 40 characters</div>;
+const Message = ({ text }) => {
+  return <div className="message">{text}</div>;
 };
 
-const NameWithHandle = () => {
+const NameWithHandle = ({ author }) => {
+  const { name, handle } = author;
   return (
     <span className="name-with-handle">
-      <span className="name">Your name</span>
-      <span className="handle">@yourhandle</span>
+      <span className="name">{name}</span>
+      <span className="handle">@{handle}</span>
     </span>
   );
 };
 
-const Time = () => {
-  return <span className="time">3h ago</span>;
+const Time = ({ time }) => {
+  const now = new Date();
+  return <span className="time"></span>;
 };
 
 const ReplyButton = () => {
@@ -61,11 +58,11 @@ const MoreOptionsButton = () => {
 const Tweet = ({ tweet }) => {
   return (
     <div className="tweet">
-      <Avatar />
+      <Avatar hash={tweet.gravatar} />
       <div className="content">
-        <NameWithHandle />
-        <Time />
-        <Message />
+        <NameWithHandle author={tweet.author} />
+        <Time time={tweet.timestamp} />
+        <Message text={tweet.message} />
         <div className="buttons">
           <ReplyButton />
           <RetweetButton />

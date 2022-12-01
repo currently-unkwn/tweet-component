@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:13.5.0"],\
+            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:18.2.0"],\
             ["react-scripts", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:5.0.1"],\
@@ -11724,6 +11725,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["moment", [\
+        ["npm:2.29.4", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ms", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/ms-npm-2.0.0-9e1101a471-0e6a22b8b7.zip/node_modules/ms/",\
@@ -16210,6 +16220,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:13.5.0"],\
+            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:18.2.0"],\
             ["react-scripts", "virtual:ae2b110ef95cc7cbaadbdfeb44f15d0fe1b52d32964dc803d81c2079bc060f1ea3139c0c39b085155460f654a466bfaa15376260a6d6e6f44a78f63c3c299ba0#npm:5.0.1"],\
