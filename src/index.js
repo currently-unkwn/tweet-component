@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
+import {FaRetweet, FaHeart, FaReply, FaEllipsisH} from "react-icons/fa";
+
 const testTweet = {
   message: "Something about cats.",
   gravatar: "xyz",
@@ -40,19 +42,19 @@ const Time = ({ time }) => {
 };
 
 const ReplyButton = () => {
-  return <i className="fa fa-reply reply-button" />;
+  return <FaReply className=" reply-button" />;
 };
 
 const RetweetButton = () => {
-  return <i className="fa fa-retweet retweet-button" />;
+  return <FaRetweet className="retweet-button" />;
 };
 
 const LikeButton = () => {
-  return <i className="fa fa-heart like-button" />;
+  return <FaHeart className="like-button" />;
 };
 
 const MoreOptionsButton = () => {
-  return <i className="fa fa-ellipsis-h more-options-button" />;
+  return <FaEllipsisH className="more-options-button" />;
 };
 
 const Tweet = ({ tweet }) => {
