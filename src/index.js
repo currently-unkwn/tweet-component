@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-import {FaRetweet, FaHeart, FaReply, FaEllipsisH} from "react-icons/fa";
+import { FaRetweet, FaHeart, FaReply, FaEllipsisH } from "react-icons/fa";
+import { formatTimeAgo } from "./helpers";
 
 const testTweet = {
   message: "Something about cats.",
@@ -37,8 +38,11 @@ const NameWithHandle = ({ author }) => {
 };
 
 const Time = ({ time }) => {
-  const now = new Date();
-  return <span className="time"></span>;
+  const date = new Date(time);
+
+  const timeString = formatTimeAgo(date);
+
+  return <span className="time">{timeString}</span>;
 };
 
 const ReplyButton = () => {
