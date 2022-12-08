@@ -4,7 +4,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import { FaRetweet, FaHeart, FaReply, FaEllipsisH } from "react-icons/fa";
-import { formatTimeAgo } from "./helpers";
+import { formatTimeAgo } from "./utils";
+import { getRetweetCount } from "./helpers";
 
 const testTweet = {
   message: "Something about cats.",
@@ -14,7 +15,7 @@ const testTweet = {
     name: "IAMA Cat Person",
   },
   likes: 2,
-  retweets: 0,
+  retweets: 5,
   timestamp: "2016-07-30 21:24:37",
 };
 
@@ -49,12 +50,22 @@ const ReplyButton = () => {
   return <FaReply className=" reply-button" />;
 };
 
-const RetweetButton = () => {
-  return <FaRetweet className="retweet-button" />;
+const RetweetButton = ({ count }) => {
+  return (
+    <spn className="retweet-button">
+      <FaRetweet />
+      {getRetweetCount(count)}
+    </spn>
+  );
 };
 
-const LikeButton = () => {
-  return <FaHeart className="like-button" />;
+const LikeButton = ({ count }) => {
+  return (
+    <span className="like-button">
+      <FaHeart />
+      {count > 0 && <span className="like-count">{count}</span>}
+    </span>
+  );
 };
 
 const MoreOptionsButton = () => {
@@ -71,8 +82,8 @@ const Tweet = ({ tweet }) => {
         <Message text={tweet.message} />
         <div className="buttons">
           <ReplyButton />
-          <RetweetButton />
-          <LikeButton />
+          <RetweetButton count={tweet.retweets} />
+          <LikeButton count={tweet.likes} />
           <MoreOptionsButton />
         </div>
       </div>
